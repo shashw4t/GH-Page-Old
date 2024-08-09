@@ -77,27 +77,24 @@ button:hover {
 
 @media (max-width: 768px) {
   .container {
-    width: 95%;
+	width: 95%;
   }
 
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+	flex-direction: column;
+	align-items: flex-start;
   }
 
   .navbar a {
-    margin: 10px 0;
+	margin: 10px 0;
   }
 
   section {
-    padding: 40px 0;
+	padding: 40px 0;
   }
 }
 
-body {
-  font-family: Arial, sans-serif;
-}
-
+/* Additional styles */
 .jumbotron {
   background-color: #f8f9fa;
   padding: 2rem 1rem;
