@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal website",
   "main": "index.js",
-  "homepage": "https://shashw4t.github.io/",
+  "homepage": "https://job.shashw4t.com",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
