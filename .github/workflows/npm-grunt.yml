@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [14.x, 22.x]
 
     steps:
     - uses: actions/checkout@v4
@@ -22,9 +22,20 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run Grunt tasks
+      run: npx grunt
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./deploy
+
     - name: Install dependencies and run Grunt
-      run: |
-        npm install
+      run: npm install
         grunt
 
     - name: Setup Java JDK

@@ -2,9 +2,18 @@
   "name": "shashw4t.github.io",
   "version": "1.0.0",
   "description": "Personal website",
-  "main": "index.html",
+  "main": "index.js",
   "homepage": "https://shashw4t.github.io/",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shashw4t/shashw4t.github.io"
+  },
+  "keywords": [
+    "grunt",
+    "example"
+  ],
+  "author": "",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -19,8 +28,9 @@
   },
   "devDependencies": {
     "grunt": "^1.6.1",
-    "grunt-contrib-jshint": "^3.2.0"
+    "grunt-contrib-jshint": "^3.2.0",
+    "grunt-contrib-nodeunit": "~4.0.0",
+    "grunt-contrib-uglify": "~5.0.1"
   },
-  "author": "",
   "license": "ISC"
 }
