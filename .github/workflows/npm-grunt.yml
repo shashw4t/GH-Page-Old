@@ -2,46 +2,36 @@ name: NodeJS with Grunt
 
 on:
   push:
-    branches: [ "main" ]
+	branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+	branches: [ "main" ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+	runs-on: ubuntu-latest
+	steps:
+	  - name: Checkout repository
+		uses: actions/checkout@v2
 
-    strategy:
-      matrix:
-        node-version: [14.x, 22.x]
+	  - name: Set up Node.js
+		uses: actions/setup-node@v2
+		with:
+		  node-version: '22.6'
 
-    steps:
-    - uses: actions/checkout@v4
+	  - name: Install dependencies and run Grunt
+		run: |
+		  npm install
+		  grunt
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
+	  - name: Setup Java JDK
+		uses: actions/setup-java@v4.2.2
+		with:
+		  distribution: 'adopt'
+		  java-version: '11'
+		  cache: 'maven'
 
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run Grunt tasks
-      run: npx grunt
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./deploy
-
-    - name: Install dependencies and run Grunt
-      run: npm install
-        grunt
-
-    - name: Setup Java JDK
-      uses: actions/setup-java@v4.2.2
-      with:
-        distribution: 'adopt'
-        java-version: '11'
-        cache: 'maven'
-          
+	  - name: Deploy to GitHub Pages
+		uses: peaceiris/actions-gh-pages@v3
+		with:
+		  github_token: ${{ secrets.GITHUB_TOKEN }}
+		  publish_dir: ./deploy
