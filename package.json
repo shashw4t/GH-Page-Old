@@ -1,35 +1,20 @@
 {
-  "dependencies": {
-	"react": "^16.14.0",
-	"react-dom": "^16.14.0",
-	"react-router-dom": "^5.2.0",
-	"react-scripts": "3.1.0",
-	"typescript": "^3.9.9"
-  },
+  "name": "shashw4t.github.io",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.html",
+  "homepage": "https://shashw4t.github.io/",
+  "private": true,
   "scripts": {
-	"start": "react-scripts start",
-	"predeploy": "yarn build",
-	"deploy": "gh-pages -d build",
-	"build": "react-scripts build",
-	"test": "react-scripts test",
-	"eject": "react-scripts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-	"extends": "react-app"
-  },
-  "browserslist": {
-	"production": [
-	  ">0.2%",
-	  "not dead",
-	  "not op_mini all"
-	],
-	"development": [
-	  "last 1 chrome version",
-	  "last 1 firefox version",
-	  "last 1 safari version"
-	]
-  },
-  "devDependencies": {
-	"@types/google-map-react": "^1.1.8"
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "shashw4t.github.io": "file:"
   }
 }
