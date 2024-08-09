@@ -1,30 +1,41 @@
 module.exports = function(grunt) {
-	// Project configuration
+	// Project configuration.
 	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
-		uglify: {
-			options: {
-				banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-			},
-			build: {
-				src: 'src/<%= pkg.name %>.js',
-				dest: 'build/<%= pkg.name %>.min.js'
-			}
+	  pkg: grunt.file.readJSON('package.json'),
+	  uglify: {
+		build: {
+		babel: {
+		  options: {
+			sourceMap: true,
+			presets: ['@babel/preset-env', '@babel/preset-react']
+		  },
+		  dist: {
+			files: [{
+			  expand: true,
+			  cwd: 'src/',
+			  src: ['**/*.js'],
+			  dest: 'build/',
+			  ext: '.js'
+			}]
+		  }
 		},
-		copy: {
-			main: {
-				expand: true,
-				cwd: 'build/',
-				src: '**',
-				dest: 'deploy/',
-			},
+		  dest: 'build/shashw4t.github.io.min.js'
 		}
+	  },
+	  copy: {
+		main: {
+		  files: [
+			// Copy all files from src to build directory
+			{expand: true, cwd: 'src/', src: ['**'], dest: 'build/'}
+		  ]
+		}
+	  }
 	});
-
-	// Load plugins and tasks
+  
+	// Load the plugins
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-
-	// Default task
+  
+	// Default task(s).
 	grunt.registerTask('default', ['uglify', 'copy']);
-};
+  };
