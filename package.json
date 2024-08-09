@@ -1,15 +1,13 @@
+
 {
   "name": "shashw4t.github.io",
   "version": "1.0.0",
   "description": "Personal website",
   "main": "index.js",
-  "homepage": "https://job.shashw4t.com",
-  "private": true,
+  "homepage": "https://shashw4t.github.io/",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "react": "^18.2.0",
