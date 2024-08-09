@@ -23,12 +23,6 @@ jobs:
 		  npm install
 		  grunt
 
-	  - name: Setup Java JDK
-		uses: actions/setup-java@v4.2.2
-		with:
-		  distribution: 'adopt'
-		  java-version: '11'
-		  cache: 'maven'
 
 	  - name: Deploy to GitHub Pages
 		uses: peaceiris/actions-gh-pages@v3
