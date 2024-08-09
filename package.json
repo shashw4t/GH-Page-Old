@@ -2,7 +2,7 @@
   "name": "shashw4t.github.io",
   "version": "1.0.0",
   "description": "Personal website",
-  "main": "index.js",
+  "main": "index.html",
   "homepage": "https://shashw4t.github.io/",
   "private": true,
   "scripts": {
@@ -14,6 +14,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "shashw4t.github.io": "file:"
   }
 }
