@@ -7,62 +7,13 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
-    "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shashw4t/shashw4t.github.io.git"
-  },
-  "author": "Shashwat Singh",
-  "license": "ISC",
   "dependencies": {
-    "@types/jest": "^29.0.0",
-    "@types/node": "^18.0.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "@types/react-image-gallery": "^1.0.2",
-    "@types/react-lottie": "^1.2.5",
-    "@types/react-router-dom": "^5.3.3",
-    "gh-pages": "^4.0.0",
-    "google-map-react": "^2.1.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-lottie": "^1.2.3",
-    "react-photo-gallery": "^8.0.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1",
-    "typescript": "^4.8.4"
-  },
-  "devDependencies": {
-    "@types/google-map-react": "^2.1.0",
-    "eslint": "^9.8.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsx-a11y": "^6.9.0",
-    "eslint-plugin-react": "^7.35.0",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "globals": "^15.9.0",
-    "typescript-eslint": "^8.0.1"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "react-scripts": "^5.0.1"
   }
 }
